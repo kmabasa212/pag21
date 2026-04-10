@@ -1,11 +1,14 @@
-import ProductList from "./components/ProductList";
+import { Routes, Route } from "react-router-dom";
+import { Products } from "./pages/Products";
+import { SearchResults } from "./pages/SearchResults";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Product Admin Dashboard</h1>
-      <ProductList />
-    </div>
+    <Routes>
+      <Route path="/" element={<Products />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/search" element={<SearchResults />} />
+    </Routes>
   );
 }
 
